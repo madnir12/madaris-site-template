@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*  variable */
+:root{
+    --textFont: 1.6rem;
+    --grad1: linear-gradient(#0071b1, #02aabb);
+    --textColor: black;
+    --textColor2: white;
+    --hoverg: gray;
+}
+/*  end variable */
+/* global classes */
+html{
+    font-family: jameel noori nastaleeq;
+    font-weight: 700;
+}
+a{
+    text-decoration: none;
+    color: var(--textColor);
+    text-align: center;
+}
+/* end global classes */
+/* nav bar */
+.nav-container{
+    position: fixed;
+    width: 100vw;
+}
+.nav-container nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem;
+    
+}
+.nav-links{
+    position: relative;
+}
+.nav-links ul{
+    direction: rtl;
+    list-style: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+}
+.nav-links ul li{
+    display: inline;
+    font-size: var(--textFont);
+    padding: 0.6rem 2rem;
+    cursor: pointer;
+
+}
+
+.nav-links ul li:hover > a{
+    color: var(--hoverg);
+}
+.drop-down-menu{
+    width: fit-content;
+    display: none;
+}
+
+.button{
+    border-radius: 5px;
+    border-bottom-left-radius: 10px;
+    background: var(--grad1);
+    color: var(--textColor2);
+    padding: 10px 40px;
+    font-size: var(--textFont);
+    height: fit-content;
+}
+.button a{
+    color: var(--textColor2);
+}
+
+.drop-down{
+
+    position: relative;
+}
+
+.drop-down-container{
+    position: absolute;
+    background: var(--textColor);
+    display: flex;
+    flex-direction: column;
+    border-radius: 7px;
+    display: none;
+    width: fit-content;
+    z-index: 1;
+    
+
+}
+.drop-down i,i.drop-down{
+    cursor: pointer;
+    color: var(--textColor);
+    font-size: var(--textFont);
+    margin-left: 10px;
+}
+.nav-links ul i{
+    font-size: var(--textFont);
+    
+}
+.drop-down-container li a{
+    color: var(--textColor2);
+}
+.drop-down-container::before{
+    content: "";
+    border: 13px solid transparent;
+    border-top-color: white;
+    width: 1px;
+    height: 1px;
+    
+    margin-right: 10%;
+    
+    
+}
+
+.drop-down:hover > .drop-down-menu{
+    display: flex;
+    position: absolute;
+    min-width: 200px;
+    
+    
+}
+
+
+/* end nav bar */
+/* mobile devices */
+@media screen and (max-width: 900px){
+    :root{
+        --textfont: 1rem;
+        --textColor2: white;
+    }
+    .nav-links{
+        position: absolute;
+        background-color: var(--textColor);
+        width: 100vw;
+        left: 0;
+        top: 10%;
+        height: fit-content;
+    }
+    .nav-links ul{
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-links ul li a{
+        color: white;
+    }
+    
+}
+
+/* end mobile devices */
