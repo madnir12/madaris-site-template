@@ -125,31 +125,66 @@ a{
     
     
 }
+.fa-bars{
+    display: none;
+}
 
 
 /* end nav bar */
 /* mobile devices */
-@media screen and (max-width: 900px){
+@media screen and (max-width: 950px){
     :root{
         --textfont: 1rem;
         --textColor2: white;
     }
+    .fa-bars{
+        display: block;
+    }
     .nav-links{
+        display: none;
         position: absolute;
         background-color: var(--textColor);
         width: 100vw;
         left: 0;
-        top: 10%;
+        top: 8vh;
         height: fit-content;
-    }
-    .nav-links ul{
-        flex-direction: column;
+        justify-content: center;
         align-items: center;
+        padding: 3rem 0;
     }
-    .nav-links ul li a{
+    .drop-down-container,.drop-down:hover .drop-down-menu{
+        position: relative;
+    }
+    .drop-down-container::before{
+        display: none;
+    }
+    .nav-container ul {
+        flex-direction: column;
+    }
+    .fa-bars{
+        font-size: 2rem;
+        font-weight: 1700;
+    }
+   
+    .nav-links ul li a,.nav-container ul i{
         color: white;
     }
     
 }
 
 /* end mobile devices */
+
+/* adding break point at 1140 */
+@media only screen and (max-width: 1140px){
+    :root{
+        --textFont: 1.3rem;
+    }
+}
+/* end break point at 1140 */
+/* adding break point at 1060 */
+@media only screen and (max-width: 1060px){
+    :root{
+        --textFont: 0.6rem;
+    }
+}
+/* end break point at 1060 */
