@@ -1,3 +1,7 @@
+@font-face {
+    font-family: jameel noori nastaleeq;
+    src: url(./ast/fonts/Jameel\ Noori\ Nastaleeq.ttf);
+  }
 *{
     margin: 0;
     padding: 0;
@@ -10,6 +14,7 @@
     --grad1: linear-gradient(#0071b1, #02aabb);
     --textColor: black;
     --textColor2: white;
+    --textHeading: 3rem;
     --hoverg: gray;
 }
 /*  end variable */
@@ -23,17 +28,43 @@ a{
     color: var(--textColor);
     text-align: center;
 }
+.section{
+    width: 100vw;
+    overflow-x: hidden;
+}
 /* end global classes */
 /* nav bar */
+body{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    animation: bd1 0.75s;
+}
+@keyframes bd1 {
+    from{
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+    to{
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+nav{
+
+    height: 10vh;
+}
 .nav-container{
-    position: fixed;
+    position: relative;
     width: 100vw;
+   
 }
 .nav-container nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 4rem;
+    overflow-x: hidden;
     
 }
 .nav-links{
@@ -60,7 +91,9 @@ a{
 }
 .drop-down-menu{
     width: fit-content;
+    transform: translateX(2rem);
     display: none;
+    
 }
 
 .button{
@@ -91,6 +124,7 @@ a{
     width: fit-content;
     z-index: 1;
     
+    
 
 }
 .drop-down i,i.drop-down{
@@ -112,8 +146,10 @@ a{
     border-top-color: white;
     width: 1px;
     height: 1px;
+    position: absolute;
+    left: 50%-5%;
     
-    margin-right: 10%;
+    
     
     
 }
@@ -128,14 +164,322 @@ a{
 .fa-bars{
     display: none;
 }
+.navscrolled{
+    position: fixed;
+    background-color: #fff;
+    z-index: 200;
+}
+
 
 
 /* end nav bar */
+/* start slider */
+.slider{
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    
+}
+.slider .slide{
+    width: 100%;
+    height: 100%;
+}
+.slider .slide img{
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 100%;
+    max-height: 100%;
 
+}
+/* end slider */
+/* start zarori malomat */
+.zarori-hidayat{
+    height: 240px;
+    overflow-x: hidden;
+    padding: 2rem 6rem;
+    
+}
+.zarori-hidayat h1{
+    text-align: center;
+    font-style: bold;
+    font-size: var(--textHeading);
+    
+}
+.zarori-hidayat p{
+    font-size: var(--textFont);
+    font-style: bold;
+    direction: rtl;
+    text-align: justify;
+}
+
+.text-slide{
+    position: absulute;
+    display: none;
+}
+
+.first-slide{
+    display: block;
+}
+/* end zarori malomat */
+/* start post area */
+/* styles for search area */
+.searcharea{
+    width: 100%;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: center;
+}
+.searcharea form{
+    width: 90%;
+    padding: 0;
+    position: relative;
+    
+}
+.searcharea form input{
+    font-size: var(--text1-6);
+    padding: 16px 32px;
+    padding-left: 60px;
+    width:100%;
+    border-radius: 50px;
+    border: 5px solid rgba(128, 128, 128,0.7);
+    outline: none;
+    color: black;
+    font-weight: 700;
+    background: transparent;
+}
+.searcharea form input:focus{
+    border: 3px solid rgba(14, 11, 11, 0.6);
+    outline: 3px solid black;
+
+}
+.searcharea form i{
+    font-size: var(--text1-6);
+    color: gray;
+    position: absolute;
+    top: 23px;
+    left: 30px;
+    z-index: -1;
+}
+/* end styles for search area */
+/* start post */
+.main-post{
+    padding: 10px 3rem;
+}
+.main-post .pht{
+    font-size: var(--textHeading);
+    font-style: bold;
+    text-align: center;
+    position: relative;
+    
+    
+
+}
+.pht::after{
+    content: "";
+    width: 95%;
+    height: 5px;
+    border-radius: 25px;
+    background-color: black;
+    position: absolute;
+    margin-top: 80px;
+    left: 3rem;
+
+}
+.post-body{
+    position: relative;
+    height: 400px;
+    width: 300px;
+    margin-top: 1rem;
+    overflow: hidden;
+   }
+   .pgrid{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       gap: 2rem;
+       flex-wrap: wrap;
+   }
+   .thumbnail{
+      width: 100%;
+      height: 50%;
+      border-radius: 5px;
+      overflow: hidden;
+   
+   
+    
+   }
+   .thumbnail img{
+    max-width:100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-top-right-radius: 5px;
+   }
+   .date{
+    position: absolute;
+    background-color: #fff;
+    color: black;
+    border-radius: 100px;
+    padding: 5px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 0.4rem 0.4rem;
+   }
+   .date span{
+    direction: rtl;
+    font-size: var(--textFont);
+    font-weight: 700;
+    font-style: bold;
+    
+    
+   }
+   .tcb{
+    height: 50%;
+    padding: 0.4rem 1rem;
+    font-size: 25px;
+    font-style: bold;
+    direction: rtl;
+   
+   }
+  
+   .tcb p{
+    text-align: justify;
+    height: 3rem;
+    overflow: hidden;
+    font-size: 18px;
+    font-style: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    direction: rtl;
+   }
+   .rmbutton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+   }
+   .rmbutton a{
+    font-size: 18px;
+    padding:  10px auto;
+    border-radius: 100px;
+   }
+   .pagination .links{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 0;
+    
+    
+}
+.pagination a{
+    color: var(--textColor);
+    border-radius: 10px;
+    border: 1px solid black;
+    
+    padding: 6px 12px;
+    transition: all 250ms ease-in-out;
+
+}
+.pagination .links a:hover,.pagination .links a.active{
+    background-color: green;
+    color: white;
+    border: none;
+}
+
+   
+/* end post */
+/* start footer */
+footer{
+    background-color: black;
+    width: 100vw;
+    min-height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: var(--textColor2);
+    gap: 40px;
+
+}
+footer > .info > .pht{
+    font-size: var(--textHeading);
+    position: relative;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+
+    
+}
+.pht::after{
+    background-color: #fff;
+    width: 100%;
+    left: 0;
+}
+footer ul{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+   align-items: center;
+   justify-content: center;
+    list-style: none;
+    direction: rtl;
+    padding: 1rem 1rem;
+}
+footer ul li a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--textColor2);
+    font-size: var(--textFont);
+    letter-spacing: 0;
+    word-spacing: 4px;
+    font-weight: 200;
+
+}
+footer ul li a:hover{
+  color: gray;
+}
+footer ul li i{
+    margin-left: 10px;
+}
+footer .social{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 20px;
+    width: fit-content;
+    
+}
+.footer-btn{
+    color: var(--textColor2);
+    text-decoration: none;
+    font-weight: 200;
+    border: 2px solid yellow;
+    padding: 15px 30px;
+    
+    border-radius: 1px;
+}
+.footer-btn i{
+    margin-right: 10px;
+    
+}
+
+.main-post .pht::after{
+    background-color: black;
+}
+
+/* end footer */
+/* end post area */
 /* adding break point at 1140 */
 @media only screen and (max-width: 1140px){
     :root{
         --textFont: 1.3rem;
+    }
+    .zarori-hidayat{
+        height: 250px;
     }
 }
 /* end break point at 1140 */
@@ -146,14 +490,31 @@ a{
     }
 }
 /* end break point at 1060 */
+
 /* mobile devices */
 @media screen and (max-width: 950px){
+    .logo{
+        width: 80%;
+        
+    }
+    .logo img{
+        object-fit: cover;
+        max-width: 100%;
+    }
+    .nav-container nav{
+        padding: 1rem 2rem;
+        
+    }
+   
     :root{
         --textfont: 10rem;
         --textColor2: white;
+        --textHeading: 2.4rem;
+        
     }
     .fa-bars{
         display: block;
+        cursor: pointer;
     }
     .nav-links{
         display: none;
@@ -161,7 +522,7 @@ a{
         background-color: var(--textColor);
         width: 100vw;
         left: 0;
-        top: 8vh;
+        top: 10vh;
         height: fit-content;
         justify-content: center;
         align-items: center;
@@ -184,7 +545,32 @@ a{
     .nav-links ul li a,.nav-container ul i{
         color: white;
     }
-    
+    .slider{
+        height: 40vh;
+    }
+    .drop-down-menu{
+        transform: translateX(0rem);
+    }
+    /* text-slider */
+    .zarori-hidayat{
+        height: 300px;
+        padding:3rem 30px;
+    }
+    /* end text-slider */
+    .pht::after{
+        width: 90%;
+        left: 20px;
+        margin-top: 50px;
+        height: 3px;
+
+ 
+    }
 }
 
+@meia only screnn and (width: 780px){
+    .zarori-hidayat{
+        height: 420px;
+    }
+}
 /* end mobile devices */
+
