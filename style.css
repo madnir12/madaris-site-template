@@ -1,5 +1,5 @@
 @font-face {
-    font-family: jameel noori nastaleeq;
+    font-family: jameel nori nastaleeq;
     src: url(./ast/fonts/Jameel\ Noori\ Nastaleeq.ttf);
   }
 *{
@@ -20,7 +20,7 @@
 /*  end variable */
 /* global classes */
 html{
-    font-family: jameel noori nastaleeq;
+    font-family: jameel noori nastaleeq, jameel nori nastaleeq;
     font-weight: 700;
     font-size: 10px;
 }
