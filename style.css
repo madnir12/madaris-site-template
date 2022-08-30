@@ -10,11 +10,11 @@
 
 /*  variable */
 :root{
-    --textFont: 1.6rem;
+    --textFont: 1.8rem;
     --grad1: linear-gradient(#0071b1, #02aabb);
     --textColor: black;
     --textColor2: white;
-    --textHeading: 3rem;
+    --textHeading: 3.5rem;
     --hoverg: gray;
 }
 /*  end variable */
@@ -114,6 +114,9 @@ nav{
 
     position: relative;
 }
+.drop-down-container ul{
+    padding-top: 3rem;
+}
 
 .drop-down-container{
     position: absolute;
@@ -124,18 +127,20 @@ nav{
     display: none;
     width: fit-content;
     z-index: 1;
-    
-    
+    padding: 2rem;
+    transform: translateX(2rem);
 
 }
+
 .drop-down i,i.drop-down{
     cursor: pointer;
     color: var(--textColor);
     font-size: var(--textFont);
-    margin-left: 10px;
+    margin-left: 1rem;
 }
 .nav-links ul i{
     font-size: var(--textFont);
+    transform: rotate(90deg);
     
 }
 .drop-down-container li a{
@@ -149,12 +154,15 @@ nav{
     height: 1px;
     position: absolute;
     left: 50%-5%;
-    
-    
-    
-    
+    transform: translateY(-2rem);
+   
 }
 
+
+.drop-down:hover:hover > .fa-caret-down{
+    transform: rotate(0deg);
+    
+}
 .drop-down:hover > .drop-down-menu{
     display: flex;
     position: absolute;
@@ -282,7 +290,7 @@ nav{
     border-radius: 25px;
     background-color: black;
     position: absolute;
-    margin-top: 80px;
+    margin-top: 50px;
     left: 3rem;
 
 }
@@ -290,14 +298,14 @@ nav{
     position: relative;
     height: 400px;
     width: 300px;
-    margin-top: 1rem;
+    margin-top: 3rem;
     overflow: hidden;
    }
    .pgrid{
        display: flex;
        justify-content: center;
        align-items: center;
-       gap: 2rem;
+       gap: 3rem;
        flex-wrap: wrap;
    }
    .thumbnail{
@@ -354,6 +362,7 @@ nav{
     overflow: hidden;
     text-overflow: ellipsis;
     direction: rtl;
+    margin-bottom: 2rem;
    }
    .rmbutton{
     display: flex;
@@ -397,15 +406,20 @@ nav{
 footer{
     background-color: black;
     width: 100vw;
-    min-height: 30vh;
+    min-height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     color: var(--textColor2);
-    gap: 40px;
+    gap: 5rem;
+    padding: 5rem;
 
 }
+footer .social,footer .footer-logo{
+    margin-top: 3rem;
+}
+
 footer > .info > .pht{
     font-size: var(--textHeading);
     position: relative;
@@ -561,7 +575,7 @@ footer .social{
     .pht::after{
         width: 90%;
         left: 20px;
-        margin-top: 50px;
+        margin-top: 40px;
         height: 3px;
 
  
