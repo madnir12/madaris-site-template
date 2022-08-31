@@ -498,6 +498,28 @@ footer .social{
     }
 }
 /* end break point at 1140 */
+/* start contact area */
+.contact-body{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+
+
+}
+.contact-body::before{
+    content: "";
+    position: absolute;
+    background-image: url(./ast/images/back.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 40vh;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+/* end contact area */
 /* adding break point at 1060 */
 @media only screen and (max-width: 1060px) and (min-width:951px){
     :root{
