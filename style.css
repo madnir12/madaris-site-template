@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: jameel noori nastaleeq,jameel nori nastaleeq;
 }
 
 /*  variable */
@@ -290,7 +291,7 @@ nav{
     border-radius: 25px;
     background-color: black;
     position: absolute;
-    margin-top: 50px;
+    margin-top: 45px;
     left: 3rem;
 
 }
@@ -437,7 +438,7 @@ footer > .info > .pht{
 footer ul{
    display: flex;
    flex-wrap: wrap;
-   gap: 20px;
+   gap: 5rem;
    align-items: center;
    justify-content: center;
     list-style: none;
@@ -453,13 +454,14 @@ footer ul li a{
     letter-spacing: 0;
     word-spacing: 4px;
     font-weight: 200;
+    margin-bottom: 10px;
 
 }
 footer ul li a:hover{
   color: gray;
 }
 footer ul li i{
-    margin-left: 10px;
+    margin-left: 30px;
 }
 footer .social{
    display: grid;

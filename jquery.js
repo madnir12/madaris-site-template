@@ -4,8 +4,11 @@ $("document").ready(()=>{
     });
 
       // slide show
-  let slides = $('.slide');
-  let num = 1;
+      let slides = "";
+      let page = window.location.pathname;
+      if(page.includes("index.htm")){ // this will run only index page
+        slides = document.querySelector('.slider').querySelectorAll('.slide');
+        let num = 1;
   
   setInterval(() => {
     
@@ -24,6 +27,9 @@ $("document").ready(()=>{
     
   }, 8000);
   // end slider
+      }
+  
+  
 //   start text slider
   let textSlides = $('.text-slide');
   let textNum = 1;
