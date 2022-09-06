@@ -248,7 +248,7 @@ nav{
 .searcharea form input{
     font-size: var(--text1-6);
     padding: 16px 32px;
-    padding-left: 60px;
+    padding-right: 60px;
     width:100%;
     border-radius: 50px;
     border: 5px solid rgba(128, 128, 128,0.7);
@@ -256,6 +256,7 @@ nav{
     color: black;
     font-weight: 700;
     background: transparent;
+    direction: rtl;
 }
 .searcharea form input:focus{
     border: 3px solid rgba(14, 11, 11, 0.6);
@@ -267,7 +268,7 @@ nav{
     color: gray;
     position: absolute;
     top: 23px;
-    left: 30px;
+    right: 30px;
     z-index: -1;
 }
 /* end styles for search area */
@@ -291,7 +292,7 @@ nav{
     border-radius: 25px;
     background-color: black;
     position: absolute;
-    margin-top: 45px;
+    margin-top: 60px;
     left: 3rem;
 
 }

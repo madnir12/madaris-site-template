@@ -58,7 +58,8 @@ $("document").ready(()=>{
 // end navbar effect
 // start autog
 
-let container = document.getElementById("pcontainer");
+if(page.includes("index.html")){
+  let container = document.getElementById("pcontainer");
 let html = ` <article class="post-body" id="pbody">
 <div class="thumbnail">
     <div class="date">
@@ -74,9 +75,23 @@ let html = ` <article class="post-body" id="pbody">
         <a href="#" class="button">مزید تفصیل</a>
     </div>
 </article>`;
-genratef(container,html)
-function genratef(container,html){ 
-  for(let index = 0; index < 20; index++){
+let end2 = 20;
+genratef(container,html,end2);
+};
+// genrate fatawa
+if(page.includes("fatawa.html")){
+  let fatawa = document.querySelector('.fatawaContainer');
+let htmlFatawa = ` <div class="fatawaDiv">
+<h3>فتاوٰی عنوان</h3>
+<img src="./ast/images/fatawa.jpg" alt="">
+<a href="#">ڈاؤن لوڈ پی ڈی ایف</a>
+</div>`;
+ let end = 69;
+genratef(fatawa,htmlFatawa,end);
+}
+// ends genrate fatawa
+function genratef(container,html,last){ 
+  for(let index = 0; index < last; index++){
     
     container.innerHTML += html;
   }
